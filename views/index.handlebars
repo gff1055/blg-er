@@ -1,0 +1,29 @@
+
+<div class="h-100 p-5 bg-body-tertiary border rounded-3">
+    <h2>Bem-vindo ao blog do node</h2>
+    <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+    <button class="btn btn-primary" type="button">Crie uma conta</button>
+</div>
+<h2> Postagens recentes: </h2>
+
+{{#each postagens}}
+
+<div class="card">
+    <div class="card-body">
+        <h3>{{titulo}}</h3>
+        <p>{{descricao}}</p>
+
+        <a href="/postagem/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+        <hr>
+
+        <small>{{'categoria.nome'}}</small>
+        <small>Data de publicacao: {{date}}</small>
+
+    </div>
+</div>
+
+{{else}}
+
+<h5>Nenhuma postagem</h5>
+
+{{/each}}
